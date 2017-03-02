@@ -13,6 +13,6 @@ public class FamilyMemberFragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater LayoutInflater, ViewGroup ViewGroup, Bundle Bundle){
         super.onCreateView(LayoutInflater,ViewGroup,Bundle);
         View rootView = LayoutInflater.inflate(R.layout.fragment_family_member,ViewGroup,false);
-        
+        return rootView;
     }
 }
