@@ -3,6 +3,7 @@ package org.pltw.examples.collegeapp;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -78,13 +79,19 @@ public class ApplicantActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int contentFragment = null;
+        FamilyMemberFragment contentFragment = new FamilyMemberFragment();
         int id = item.getItemId();
 
         if (id == R.id.family_member) {
             // Handle the camera action
         } else if (id == R.id.profile) {
 
+        }
+
+        if(contentFragment != null){
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_frame, contentFragment);
+            ft.commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
