@@ -78,7 +78,7 @@ public class ApplicantActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        FamilyMemberFragment contentFragment = new FamilyMemberFragment();
+        int contentFragment = null;
         int id = item.getItemId();
 
         if (id == R.id.family_member) {
